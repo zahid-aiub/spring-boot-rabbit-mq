@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MqConfig {
 
-    public static final String QUEUE_NAME = "message_queue";
+    public static final String QUEUE = "message-queue";
     public static final String EXCHANGE = "message-exchange";
     public static final String ROUTING_KEY = "message-routingKey";
 
     @Bean
     public Queue queue() {
-        return new Queue(QUEUE_NAME, true);
+        return new Queue(QUEUE, true);
     }
 
     @Bean

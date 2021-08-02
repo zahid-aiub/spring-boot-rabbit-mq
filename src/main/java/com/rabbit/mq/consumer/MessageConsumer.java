@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageConsumer {
 
-    @RabbitListener(queues = MqConfig.QUEUE_NAME)
+    @RabbitListener(queues = MqConfig.QUEUE)
     public void listener(CustomMessage message) {
         System.out.println("::::::::::::::::: Received From Queue ::::::::::::::::::::::::");
         System.out.println(message);
